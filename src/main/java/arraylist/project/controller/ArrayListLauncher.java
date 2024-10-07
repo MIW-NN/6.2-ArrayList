@@ -1,9 +1,8 @@
 package arraylist.project.controller;
 
-import arraylist.project.model.Car;
+import arraylist.project.model.Auto;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class ArrayListLauncher {
 
@@ -21,7 +20,14 @@ public class ArrayListLauncher {
 
 
         // Opgave 5. Lijst van getallen
-
+        ArrayList<Number> rijGetallen = new ArrayList<>();
+        rijGetallen.add(5);
+        rijGetallen.add(8);
+        rijGetallen.add(3.14);
+        rijGetallen.add(13);
+        rijGetallen.add(21);
+        rijGetallen.add(2.72);
+        rijGetallen.add(34);
 
         // Opgave 5a: toon alleen gehele getallen, dus de integers.
 
@@ -33,37 +39,45 @@ public class ArrayListLauncher {
 
 
         // Opgave 6. Lijst van auto's
+        ArrayList<Auto> autos = new ArrayList<>();
+        autos.add(new Auto("Skoda", "Superb", 1400, "benzine"));
+        autos.add(new Auto("Skoda", "Octavia", 1200, "diesel"));
+        autos.add(new Auto("Skoda", "Fabia", 1100, "gas"));
+        autos.add(new Auto("Tesla", "Model S", 1500, "elektrisch"));
+        autos.add(new Auto("Tesla", "Cybertruck", 2200, "elektrisch"));
+
+        System.out.println(geefZwaarsteAuto(autos));
 
     }
 
     // Methode bij Opgave 2. Lijst van Random gehele getallen.
-    public static ArrayList<Integer> makeRandomListOfNumbers(int aantal, int maximum) {
+    public static ArrayList<Integer> maakRandomRijGetallen(int aantal, int maximum) {
         return new ArrayList<>();
     }
 
     // Methode bij Opgave 3. Som van een rij getallen
-    public static int sumOfList(ArrayList<Integer> list) {
+    public static int somVanRij(ArrayList<Integer> list) {
         return 0;
     }
 
 
     // Methode bij Opgave 4. Gemiddelde van een rij getallen
-    public static double averageOfList(ArrayList<Integer> list) {
+    public static double gemiddeldeVanRij(ArrayList<Integer> list) {
         return  0;
     }
 
-    // Methode bij Opgave 5c. eerst de som van de rij getallen (Numbers)
-    public static double sumOfNumberList(ArrayList<Number> list) {
+    // Methode bij Opgave 5c. De som van de rij getallen (Numbers)
+    public static double somVanNumberLijst(ArrayList<Number> list) {
         return 0;
     }
 
-    // Methode bij Opgave 5c. gemiddelde van een rij getallen (Numbers)
-    public static double averageOfNumberList(ArrayList<Number> list) {
+    // Methode bij Opgave 5c. Gemiddelde van een rij getallen (Numbers)
+    public static double gemiddeldeVanNumberLijst(ArrayList<Number> list) {
         return  0;
     }
 
     // Methode bij Opgave 6. Lijst van auto's
-    public static Car giveHeaviestCar(ArrayList<Car> cars) {
-        return new Car("","",0,"");
+    public static Auto geefZwaarsteAuto(ArrayList<Auto> autos) {
+        return autos.get(0);
     }
 }
