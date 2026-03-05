@@ -3,7 +3,6 @@ package arraylist.project.controller;
 import arraylist.project.model.Auto;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class ArrayListLauncher {
 
@@ -28,14 +27,14 @@ public class ArrayListLauncher {
 
         // Opgave 2. Lijst van Random gehele getallen.
         ArrayList<Integer> lijstGeheelGetallen;
-        lijstGeheelGetallen = maakRijWillekeurigeGetallen(25, 100);
+        lijstGeheelGetallen = ArrayListMethoden.maakRijWillekeurigeGetallen(25, 100);
         System.out.println(lijstGeheelGetallen);
 
         // Opgave 3. Som van een rij getallen
-        System.out.println("De som van de rij is: " + somVanRij(lijstGeheelGetallen));
+        System.out.println("De som van de rij is: " + ArrayListMethoden.somVanRij(lijstGeheelGetallen));
 
         // Opgave 4. Gemiddelde van een rij getallen
-        System.out.println("Het gemiddelde van de rij is: " + gemiddeldeVanRij(lijstGeheelGetallen));
+        System.out.println("Het gemiddelde van de rij is: " + ArrayListMethoden.gemiddeldeVanRij(lijstGeheelGetallen));
 
         // Opgave 5. Lijst van getallen
         ArrayList<Number> tweedeLijst = new ArrayList<>();
@@ -80,33 +79,6 @@ public class ArrayListLauncher {
         autoLijst.add(new Auto("Honda", "Civic", 1075, "benzine"));
         System.out.println(geefZwaarsteAuto(autoLijst));
 
-    }
-
-    // Methode bij Opgave 2. Lijst van Random gehele getallen.
-    public static ArrayList<Integer> maakRijWillekeurigeGetallen(int aantal, int maximum) {
-        ArrayList<Integer> getallenLijst = new ArrayList<>();
-        // Naast de Math.random() methode uit Programming kan ook de onderstaande code gebruikt worden.
-        Random generator = new Random();
-        for (int i = 0; i < aantal; i++) {
-            getallenLijst.add(generator.nextInt(maximum));
-        }
-        return getallenLijst;
-    }
-
-    // Methode bij Opgave 3. Som van een rij getallen
-    public static int somVanRij(ArrayList<Integer> list) {
-        int sum = 0;
-        for (Integer number : list) {
-            sum += number;
-        }
-        return sum;
-    }
-
-
-    // Methode bij Opgave 4. Gemiddelde van een rij getallen
-    public static double gemiddeldeVanRij(ArrayList<Integer> list) {
-        int sum = somVanRij(list);
-        return  (double) sum / list.size();
     }
 
     // Methode bij Opgave 5c. eerst de som van de rij getallen (Numbers)
