@@ -17,24 +17,28 @@ public class ArrayListLauncherTest {
         Assert.assertTrue(list.stream().noneMatch(n -> n > 25));
     }
 
+    @Test
     public void testSomVanRij() {
         var list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
         Assert.assertEquals(55, ArrayListLauncher.somVanRij(list));
     }
 
+    @Test
     public void testGemiddeldeVanRij() {
         var list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
         Assert.assertEquals(6, ArrayListLauncher.gemiddeldeVanRij(list), 0.00);
     }
 
+    @Test
     public void testSumOfListOfNumbers() {
         var list = new ArrayList<Number>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
         Assert.assertEquals(55, ArrayListLauncher.somVanNumberLijst(list));
     }
 
+    @Test
     public void testGemiddeldeVanNumberLijst() {
         var list = new ArrayList<Number>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
@@ -42,6 +46,7 @@ public class ArrayListLauncherTest {
 
     }
 
+    @Test
     public void testGeefZwaarsteAuto() {
         var heaviestCar = new Auto("", "", 4, "");
 
